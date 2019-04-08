@@ -1,0 +1,32 @@
+{
+    "name": "stone-test",
+    "version": "0.0.1",
+    "description": "API test with structure using WalnutJS",
+    "main": "index.js",
+    "directories": {
+      "test": "test"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mmendesas/walnutjs-test.git"
+    },
+    "keywords": [
+      "walnutJS"
+    ],
+    "author": "Andre Sakai",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/andresakai/stone-test/issues"
+    },
+    "homepage": "https://github.com/andresakai/stone-test",
+    "dependencies": {
+      "walnutjs": "^1.0.52"
+    },
+    "devDependencies": {
+      "unirest": "^0.5.1"
+    }
+  }
+  
