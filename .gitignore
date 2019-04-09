@@ -1,3 +1,4 @@
 node_modules
 test/results.json
 test/stone-test
+test/params/params.json

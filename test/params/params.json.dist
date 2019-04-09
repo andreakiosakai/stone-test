@@ -1,0 +1,6 @@
+{
+    "name": "stone-test",
+    "default":{
+        "base_url": "<url>"
+    }
+}
