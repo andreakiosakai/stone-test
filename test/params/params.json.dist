@@ -1,6 +1,9 @@
 {
     "name": "stone-test",
     "default":{
-        "base_url": "<url>"
+        "base_url": "%BASE_URL%",
+        "api_url": "%API_URL%",
+        "username": "%USERNAME%",
+        "password": "%PASSWORD%"
     }
 }
