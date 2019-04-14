@@ -47,7 +47,7 @@ exports.config = {
         ],
         // Only execute the features or scenarios with tags matching @dev.
         // This may be an array of strings to specify multiple tags to include.
-        tags: '@balance',
+        tags: '@statement',
 
         // How to format features (progress, summary, pretty, json)
         format: 'pretty',
