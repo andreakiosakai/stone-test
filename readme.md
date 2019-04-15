@@ -1,6 +1,5 @@
 # Stone-test
  * Test project with default structure using [WalnutJS](https://github.com/mmendesas/walnutjs).
- * Use this project as a template to create your own project using the WalnutJS framework.
 
  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6f7a6886fa434657b9956ac7adf4279d)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=andresakai/stone-test&amp;utm_campaign=Badge_Grade)
 
@@ -36,7 +35,8 @@ You must rename params.json.dist to params.json, and change to the correct param
     }
 }
 ```
-** Please, note that username <YYYYYYYYY> and password <ZZZZZZZZZ> must be created before running these tests, otherwise these test will not run. If the account has already transactions or transfers, some tests will fail. 
+** Please, note that username <YYYYYYYYY> and password <ZZZZZZZZZ> must be created before running these tests, otherwise these test will not run. If the account has already transactions or transfers, some tests will fail.
+
 ** To successfully run these test, must be a new account, with password created, and a $1000,00 account balance.
 
 ## Local
