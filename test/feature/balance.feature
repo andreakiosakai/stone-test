@@ -25,8 +25,8 @@ Background: Load variables from params, get authorization and get account ID
       And (api) the response status should be '200'
       And (api) user stores the value '$[0].id' from response in variable 'account_id'
 
-@account @balance
-Scenario: Get balance
+@stone @account @balance
+Scenario: Balance - Get balance
     Given (api) user creates a GET request to '${vars.api_url}/api/v1/accounts/${vars.account_id}/balance'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |
@@ -36,8 +36,8 @@ Scenario: Get balance
       And (api) the JSON response key '$.blocked_balance' should have value equals to '0'
       And (api) the JSON response key '$.scheduled_balance' should have value equals to '0'
 
-@account @balance
-Scenario: Wrong account id
+@stone @account @balance
+Scenario: Balance - Wrong account id
     Given (api) user creates a GET request to '${vars.api_url}/api/v1/accounts/123/balance'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |
