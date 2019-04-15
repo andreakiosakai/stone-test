@@ -25,8 +25,8 @@ Background: Load variables from params, get authorization and get account ID
       And (api) the response status should be '200'
       And (api) user stores the value '$[0].id' from response in variable 'account_id'
 
-@account @statement
-Scenario: Get Statement
+@stone @account @statement
+Scenario: Statement - Get Statement
     Given (api) user creates a GET request to '${vars.api_url}/api/v1/accounts/${vars.account_id}/statement'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |
@@ -44,3 +44,12 @@ Scenario: Get Statement
       And (api) the JSON response key '$[0].counter_party.entity.document' should have value equals to '39572379801'
       And (api) the JSON response key '$[0].counter_party.entity.document_type' should have value equals to 'cpf'
       And (api) the JSON response key '$[0].counter_party.entity.name' should have value equals to 'Eduardo Machado Freire'
+
+@stone @account @balance
+Scenario: Statement - Wrong account id
+    Given (api) user creates a GET request to '${vars.api_url}/api/v1/accounts/123/statement'
+      And (api) user sets the following headers to request:
+        | "Authorization" | "Bearer ${vars.access_token}" |
+     When (api) user sends the request
+     Then (api) the response status should be '403'
+      And (api) the JSON response key '$.type' should have value equals to 'srn:error:unauthorized'
