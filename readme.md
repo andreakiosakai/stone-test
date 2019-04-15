@@ -35,7 +35,7 @@ You must rename params.json.dist to params.json, and change to the correct param
     }
 }
 ```
-** Please, note that username <YYYYYYYYY> and password <ZZZZZZZZZ> must be created before running these tests, otherwise these test will not run. If the account has already transactions or transfers, some tests will fail.
+** Please, note that username (YYYYYYYYY) and password (ZZZZZZZZZ) must be created before running these tests, otherwise these test will not run. If the account has already transactions or transfers, some tests will fail.
 
 ** To successfully run these test, must be a new account, with password created, and a $1000,00 account balance.
 
@@ -104,7 +104,7 @@ $ docker run --rm -v $(pwd):/bdd andresakai/docker-protractor:latest protractor.
 ```
 Check wich tag for docker container you can use in your test run: https://cloud.docker.com/repository/docker/andresakai/docker-protractor/tags
 
-For <args> (optional), you can use to override default values in protractor.conf.js:
+For "args" (optional), you can use to override default values in protractor.conf.js:
 --cucumberOpts.tags (to change tags that will run tests, without changing protractor.conf.js)
 
 Tags used in this project:
