@@ -25,6 +25,8 @@ Background: Load variables from params, get authorization and get account ID
       And (api) the response status should be '200'
       And (api) user stores the value '$[0].id' from response in variable 'account_id'
 
-Scenario: Scheduling an internal trasnfer
+Scenario: Scheduling an internal transfer
 
-Scenario:
+Scenario: Scheduling with a invalid date
+
+

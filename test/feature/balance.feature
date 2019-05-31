@@ -1,6 +1,7 @@
 Feature: Endpoint Saldo
     As a client,
     I want to get informantions about my account balance
+    #Need to be refactored
 
 Background: Load variables from params, get authorization and get account ID
     Given user stores the following list of variables:

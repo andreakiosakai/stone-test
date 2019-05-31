@@ -28,10 +28,14 @@ Background: Load variables from params, get authorization and get account ID
 
 Scenario: Making an internal transfer, validating balance and checking target account
 
+Scenario: Cancelling internal transfer, and validating balance
+
+Scenario: Returning an internal trasnfer, and validanting balance
+
 Scenario: Making an invalid transfer with , validating balance
 
 Scenario: Making an invalid transfer to invalid account, validating balance
 
 Scenario: Making an invalid transfer with zero amount, validating balance
 
-Scenario: Making an invalid transfer with invalid amount (not int),validating balace
+Scenario: Making an invalid transfer with invalid amount (not int),validating balance
