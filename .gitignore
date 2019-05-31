@@ -1,5 +1,5 @@
 node_modules
 test/results.json
 test/stone-test
-test/params/params.json
+test/params/*.json
 package-lock.json

@@ -1,6 +1,7 @@
 Feature: Transfer between internal accounts simulation
     As a client,
     I want to simulate a internal transfer to another account
+    Needs to be improved
 
 Background: Load variables from params, get authorization and get account ID
     Given user stores the following list of variables:
@@ -45,7 +46,7 @@ Scenario: Transfer Simulation - Making a internal transfer simulation
       And (api) the JSON response key '$.target_account_owner_name' should have value equals to 'Victor Nascimento'
       
 @stone @internal_simulation
-Scenario: Transfer Simulation - Making a invalid transfer simulation with a invalid account
+Scenario: Transfer Simulation - Making a invalid transfer simulation with a invalid account id
     Given (api) user creates a POST request to '${vars.api_url}/api/v1/dry_run/internal_transfers'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |
@@ -60,7 +61,7 @@ Scenario: Transfer Simulation - Making a invalid transfer simulation with a inva
       And (api) the JSON response key '$.type' should have value equals to 'srn:error:unauthorized'
       
 @stone @internal_simulation
-Scenario: Transfer Simulation - Making a invalid transfer simulation to a invalid account
+Scenario: Transfer Simulation - Making a invalid transfer simulation to a invalid target account
     Given (api) user creates a POST request to '${vars.api_url}/api/v1/dry_run/internal_transfers'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |
@@ -75,7 +76,7 @@ Scenario: Transfer Simulation - Making a invalid transfer simulation to a invali
       And (api) the JSON response key '$.type' should have value equals to 'srn:error:target_account_not_found'
 
 @stone @internal_simulation
-Scenario: Transfer Simulation - Making a invalid transfer simulation to a invalid amount (not integer)
+Scenario: Transfer Simulation - Making a invalid transfer simulation with an invalid amount (not integer)
     Given (api) user creates a POST request to '${vars.api_url}/api/v1/dry_run/internal_transfers'
       And (api) user sets the following headers to request:
         | "Authorization" | "Bearer ${vars.access_token}" |

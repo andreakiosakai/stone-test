@@ -1,0 +1,20 @@
+{
+    "amount": "",
+    "account_id": "",
+    "target": [
+        {
+            "account":{
+                "account_code": "",
+                "branch_code": "",
+                "intitutioni_code": ""
+            }
+        },
+        {
+            "entity":{
+                "name": "",
+                "cpf": ""
+            }
+        }
+    ],
+    "scheduled_to": ""
+}
